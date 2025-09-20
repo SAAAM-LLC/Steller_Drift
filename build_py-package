@@ -1,0 +1,46 @@
+Building the Package
+
+From the root directory:
+
+python setup.py sdist bdist_wheel
+
+Testing Locally
+
+Install the package locally to test:
+
+pip install dist/saAam-core-1.0.0-py3-none-any.whl
+
+Run the endpoint:
+
+python -m saAam_core.server.endpoint
+
+
+Deployment
+
+For deployment, use a private repository or an internal PyPI-like system:
+
+    Private Hosting:
+        Use AWS CodeArtifact, Nexus, or GitHub Packages.
+    Install in Production:
+
+pip install --extra-index-url <your-private-repo-url> saAam-core
+
+
+#########
+
+ Testing and Refinement
+
+    Run the Full System:
+        Launch main.py or interact with the endpoint to test NPC behavior, world updates, and player interactions.
+    Monitor Performance:
+        Add centralized logging in logging_util.py to capture key events.
+    Iterate on Core Modules:
+        Test consciousness evolution and memory integration for edge cases.
+
+6. Ready for Action
+
+With SaAaM-Core, you have:
+
+    A secure, modular Python package.
+    A local endpoint for managing interactions.
+    Room to expand without exposing core logic.
